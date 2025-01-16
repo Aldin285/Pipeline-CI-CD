@@ -1,0 +1,18 @@
+Package à installer: 
+Jenkins Pipeline Linter Connector
+Jenkins Runner
+Jenkins Pipeline Linter Connector (fork)
+Jenkins
+
+Après avoir installer jenkins et s'etre connecter à son compte à partir du lien (http://localhost:8080/),
+on ouvre les parametres de l'extension Jenkins Pipeline Linter Connector et on ajoute : 
+-L'URL : dans Jenkins › Pipeline › Linter › Connector: Url , on saisit http://localhost:8080/pipeline-model-converter/validate
+Note :localhost:8080 change par rapport au nom du site donné par l'utilisateur
+-Nom d'utilisateur : dans Jenkins › Pipeline › Linter › Connector: User , on saisit notre nom d'utilisateur
+-Token (jeton): sur jenkins (site web), on suit le chemin Administrateur Jenkins>Users>notre user>Securite> ajouter un jeton , 
+    il faudra saisir un nom (j'ai mis mon nom user) pour créer le jeton, copier le jeton créer et le coller dans Jenkins › Pipeline › Linter › Connector: Token
+
+Pour le moment, ceci nous permet de réaliser des tests sur notre fichier 'jenkinsfile' dans Vscode pour verifier si il y a des erreures
+(Il faudra saisir '>Validate JenkinsFile' dans la bare de recherche de VSCode pour réaliser le test )
+
+
