@@ -1,2 +1,4 @@
-Documentation : 
-https://docs.gitlab.com/ee/ci/
+Using Docker with Pipeline :
+https://www.jenkins.io/doc/book/pipeline/docker/
+
+
