@@ -15,4 +15,31 @@ Note :localhost:8080 change par rapport au nom du site donné par l'utilisateur
 Pour le moment, ceci nous permet de réaliser des tests sur notre fichier 'jenkinsfile' dans Vscode pour verifier si il y a des erreures
 (Il faudra saisir '>Validate JenkinsFile' dans la bare de recherche de VSCode pour réaliser le test )
 
+------------Git X Jenkins----------------
+Note : il faudra à chaque fois faire un commit pour que les modifications soient appliquées sur Jenkins 
+
+Pour faire en sorte qu'on est le même fichier Jenkins sur VSCode et sur Jenkins : 
+sur Jenkins, après avoir créé un pipeline, dans Configurer du pipeline, on clique sur GitHub project où il faudra saisir le lien de notre projet GitHub (https://github.com/Aldin285/Pipeline-CI-CD/ dans mon cas ) 
+
+Sur la même page, en défilant en bas, en sélectionne Pipeline script from SCM au lieu de Pipeline script
+
+Dans SCM on meet Git
+Dans Repository URL au met le lien du projet GitHub
+
+Dans Branches to build, on ajoute une branche et on saisit '*/Pipeline' [il faudra la modifier à la fin du projet vu qu'il aura un merge à main] 
+
+dans script path, on met 'Pipeline/jenkinsfile' 
+Enfin, on sauvegarde les modifications réalisées et on réalise un test pour voir que tout fonctionne ( si il y a une erreure, cliquez sur le test et allez voir Console Outpout pour savoir la cause de l'erreure ) 
+
+
+------------Docker X Pipeline----------------
+Sur Jenkins, on suit le chemin suivant : Tableau de bord ==> Administrateur Jenkins ==> Plugins.
+Dans Plugins disponible, on installe Docker et Docker Pipeline
+il faudra redémarrer Jenkins après l'installation pour finaliser le téléchargement en saisissant le lien  : http://localhost:8080/restart
+
+Après avoir créer un fichier docker, on saisit la commande suivante : docker build -t nom-docker .  ( n'oublie pas le point à la fin ) 
+( le  -t est pour donner un nom au centenaire et le . est pour donner son emplacement ) 
+https://docs.docker.com/get-started/docker-concepts/building-images/writing-a-dockerfile/ ==> pour voir quel contenu on met dans le fichier docker
+
+
 
