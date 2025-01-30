@@ -43,3 +43,13 @@ https://docs.docker.com/get-started/docker-concepts/building-images/writing-a-do
 
 
 
+------------Modules à installer sur docker-------------------------------
+Il faut que tout les modules nécessaires soient installés .
+Pour ça, il faut saisir les commandes suivantes : 
+node .\app\src\index.js==> pour voir si Node.js detecte le fichier index.js et afficher le nom des modules manquants
+npm install nom_module ==> installer un module
+
+Note: j'ai saisit la commande suivante pour installer le module express ==>npm install express --save
+
+
+

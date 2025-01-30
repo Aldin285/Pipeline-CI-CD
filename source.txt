@@ -1,4 +1,6 @@
 Using Docker with Pipeline :
 https://www.jenkins.io/doc/book/pipeline/docker/
 
+Writing a Dockerfile:
+https://docs.docker.com/get-started/docker-concepts/building-images/writing-a-dockerfile/
 
