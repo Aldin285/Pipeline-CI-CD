@@ -1,21 +1,34 @@
-
+// example à saisir
 pipeline {
-    agent any
+    agent { docker { image 'node:22.13.1-alpine3.21' } }
     stages {
-        stage('Check File') {
+        stage('build') {
             steps {
-                script {
-                    if (fileExists('Dockerfile')) {
-                        def content = readFile 'Dockerfile'
-                        echo "Dockerfile content: ${content}"
-                    } else {
-                        error "Dockerfile not found!"
-                    }
-                }
+                sh 'node --version'
             }
         }
     }
 }
+
+// Pour tester si il detecte le docker file
+
+// pipeline {
+//     agent any
+//     stages {
+//         stage('Check File') {
+//             steps {
+//                 script {
+//                     if (fileExists('Dockerfile')) {
+//                         def content = readFile 'Dockerfile'
+//                         echo "Dockerfile content: ${content}"
+//                     } else {
+//                         error "Dockerfile not found!"
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 
 
 // pipeline {
