@@ -10,13 +10,13 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    dockerImage = docker.build("SDV/pipeline:${env.BUILD_NUMBER}")
+                    dockerImage = docker.build("jenkins/jenkins:latest")
                 }
             }
         }
         stage('Test') {
             steps {
-                sh 'docker run --rm SDV/pipeline:${env.BUILD_NUMBER} ./run-tests.sh'
+                sh 'docker run --rm docker-jenkins1 ./run-tests.sh'
             }
         }
         stage('Push') {
